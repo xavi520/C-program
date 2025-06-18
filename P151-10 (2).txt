@@ -1,0 +1,17 @@
+#include<stdio.h>
+void main()
+{
+	char str[100],zifu;
+	int i,j,m;
+	gets(str);
+	i=strlen(str);
+	printf("%d",i);
+	printf("\n");
+	for(j=0;j<i;j++,i--)
+	{
+		zifu=str[i-1];
+		str[i-1]=str[j];
+		str[j]=zifu;
+	}
+	puts(str);
+}

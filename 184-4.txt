@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<string.h>
+void f(char w[])
+{
+	int n,t ,i,j;  /* n 为字符串的长度*/
+	char zifu;
+    n=strlen (w);
+	for(i=0;i<n-1;i++)
+		for (j=0;j<n-i-1;j++)
+/*n个数，要进行n-1轮比较，第一轮要进行n-1次比较，第i趟比较中要进行n-i次比较*/
+		if(w[j]>w[j+1])/*升序*/
+		{
+			zifu=w[j];
+			w[j]=w[j+1];
+			w[j+1]=zifu;
+		}
+	printf("after sorted:\n");
+	for(i=0;i<n;i++)
+		printf("%c",w[i]);
+	printf("\n");
+}
+
+void main (void)
+{
+	char a[100];
+	printf("请输入字符:\n");
+	gets(a);
+	f(a);
+}

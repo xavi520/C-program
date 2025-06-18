@@ -1,0 +1,19 @@
+#include<stdio.h>
+void main (void)
+{
+	char str[100];
+	int i ,M=0,m=0,n=0,k=0;/*M大写字母个数，m小写字母个数，n数字字符个数，k其他字符个数*/
+    printf("请输入一个字符串:\n");
+	gets(str);
+	for(i=0;str[i];i++)/*注意这里for的判断条件是str[i],如果str[i]不是'\0',则进行统计；当str[i]为0（与'\0'等价），则表明字符串结束，所以循环终止。*/
+		if(str[i]<='Z'&&str[i]>='A')
+			M++;
+		else  if(str[i]<='z'&&str[i]>='a')
+			  m++;
+              else  if(str[i]<='9'&&str[i]>='0')
+				  n++;
+			        else 
+						k++;
+	printf("大写字母%d个；小写字母%d个；数字字符%d个；其他字符%d个；\n",M,m,n,k);
+}
+

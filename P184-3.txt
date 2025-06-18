@@ -1,0 +1,16 @@
+#include<stdio.h>
+void main (void)
+{
+	int n=3000,a,b,x,j,s;
+	for(a=1;a<n;a++)
+	{ 	for(j=1,s=0;j<=a/2;j++)
+		        if(a%j==0)
+			      s=s+j;
+		     b=s;
+	    for(j=1,s=0;j<=b/2;j++)
+			if(b%j==0)
+	         s=s+j;
+		if(s==a&&a<b)
+		   printf("%dºÍ%dÊÇÇ×ÃÜÊý\n",a,b);
+	}
+}

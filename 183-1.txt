@@ -1,0 +1,19 @@
+#include<stdio.h>
+char f(char o)
+{
+	 
+	if(o>='a'&&o<='z')
+		return  o-32 ;
+	else
+		return o;
+}
+
+
+void main (void)
+{
+    char  a,zifu;
+	printf("ÇëÊäÈëÒ»¸ö×ÖÄ¸\n");
+    scanf("%c",&a);
+	zifu=f(a);
+    printf("%c\n",zifu);
+}

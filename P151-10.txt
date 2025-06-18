@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{    
+	int k,i,j;
+	char a[100],w ;
+	printf("ÇëÊäÈë×Ö·û´®\n");
+	gets(a);
+	k=strlen(a);
+	for(i=0,j=k-1;i<j;i++,j--)
+	{ 
+	     w=a[i];
+	    a[i]=a[j];
+        a[j]=w;
+	}
+    puts(a);
+}

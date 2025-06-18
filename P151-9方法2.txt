@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+    char x, a[100]=" ";
+    int i ;
+   printf("请输入特定字母:\n");
+    scanf("%c",&x);
+	getchar();
+ printf("请输入字符串:\n");
+ gets(a);
+ for(i=0;a[i]!=x;i++)
+  printf("%c",a[i]);
+  printf("\n");
+  
+}

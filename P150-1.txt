@@ -1,0 +1,23 @@
+#include <stdio.h>
+void  main()
+{
+	int a[9] , max , min, k ,s , i;
+	float ave;
+	printf("请输入10个整数:\n");
+	for (i=0;i<=9;i++)
+	scanf("%d",&a[i]);
+	for(i=0,s=0;i<=9;i++)
+        s=a[i]+s;
+	    ave=(float)s/10;
+	for(k=0,i=1;i<=9;i++)
+		if(a[k]>a[i])
+			k=i;
+		min=a[k];
+        
+	for(k=0,i=1;i<=9;i++)
+		if(a[k]<a[i])
+			k=i;
+		max=a[k];
+		printf("10个整数的最大值是%d最小值是%d平均值是%f\n",max,min,ave);
+	
+}

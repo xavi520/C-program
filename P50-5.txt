@@ -1,0 +1,21 @@
+#include<stdio.h>
+void main()
+{
+	int a[3][5]={{1,2,3,4,5},{6,7,8,9,10},{11,12,13,14,15}};
+	int i ,j ,m,n,k;
+	m=0;n=0;
+	a[m][n]=1;
+	for(i=0;i<=2;i++)
+		for(j=0;j<=4;j++)
+			if(a[m][n]<a[i][j])
+			{	m=i; n=j;}
+	       k=a[m][n];
+		   a[m][n]=a[0][0];
+		   a[0][0]=k;
+     	for(i=0;i<=2;i++)
+		{for(j=0;j<=4;j++)
+		printf("%10d",a[i][j]);
+		printf("\n");}
+			
+}
+                

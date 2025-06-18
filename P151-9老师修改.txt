@@ -1,0 +1,14 @@
+#include<stdio.h>
+void main()
+{
+    char x, a[100];
+ int i;
+  printf("请输入特定字母:\n");
+  scanf("%c",&x);
+  getchar(); /*getchar();目的是为了清空缓冲区（上一个scanf的回车还存放在缓冲区），不然的话，会把回车放在下面gets(a)的变量a里面 */
+  printf("请输入字符串:\n");
+  gets(a);
+  for(i=0;a[i]!=x;i++)
+  printf("%c",a[i]);
+ 
+}

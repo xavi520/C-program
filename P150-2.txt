@@ -1,0 +1,20 @@
+#include <stdio.h>
+void main()
+{
+	int a[10] , i , k , min  ,t  ,x;
+	printf("请输入10个整数:\n");
+	for (i=0;i<=9;i++)
+		scanf("%d",&a[i]);
+	for(k=0,i=1;i<=9;i++)
+		if(a[k]>a[i])
+		    k=i;
+		x=k+1;
+		min=a[k];  
+		t=a[k];
+		a[k]=a[0];
+        a[0]=t;
+			printf("最小数为%d下标为%d\n",min,x);
+		for(i=0;i<=9;i++)
+			printf("%d\t",a[i]);
+		     
+}

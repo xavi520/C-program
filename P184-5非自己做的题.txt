@@ -1,0 +1,31 @@
+/*统计字符出现的次数*/
+#include "stdio.h"
+void fun(char s[], int b[])
+{
+	char ch = '\0';
+	int i=0;
+	while(s[i])
+	{
+		if(s[i] >= 'A' && s[i] <= 'Z')
+			ch = s[i] + 32;
+		else if(s[i] >= 'a' && s[i] <= 'z')
+			ch = s[i];
+		if (ch != '\0')
+			b[ch-'a']++;
+		i++;
+		ch = '\0';
+    }
+
+}
+
+void main(void)
+{
+   char ch[80];
+   int b[26]={0},i;
+   printf("请输入一串字符：\n");
+   gets(ch);
+   fun(ch,b);
+   for(i=0;i<26;i++)
+	   if(b[i])
+		   printf("%c或%c出现的次数为：%d\n",'a'+i,'A'+i,b[i]);
+}
